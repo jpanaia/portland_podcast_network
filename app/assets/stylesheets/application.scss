@@ -59,6 +59,11 @@ body {
 	}
 }
 
+.button_block {
+	display: block;
+	margin: 0 auto;
+}
+
 #main_header {
 	color: $dark;
 	background: $white;
@@ -89,6 +94,7 @@ body {
 
 #banner {
 	background-size: cover;
+	background-repeat: no-repeat;
 	background-position: center center;
 	margin-bottom: 4rem;
 	h1 {
@@ -103,7 +109,15 @@ body {
 }
 
 .podcasts_banner {
-	background: url('../images/podcasts_banner.jpg') no-repeat;
+	background-image: image-url('podcasts_banner.jpg');
+}
+
+.sign_in_banner {
+	background-image: image-url('podcasts_banner.jpg');
+}
+
+.sign_up_banner {
+	background-image: image-url('podcasts_banner.jpg');
 }
 
 .pagination:before, .pagination:after {
@@ -147,8 +161,7 @@ body {
 	}
 }
 
+
 @import 'welcome';
 @import 'normalize';
-
-/*@import 'podcasts';
-*/
+@import 'podcasts';
