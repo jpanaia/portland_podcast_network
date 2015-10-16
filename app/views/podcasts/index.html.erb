@@ -1,0 +1,20 @@
+<div id="banner" class="podcasts_banner">
+	<h1>Peruse local podcasts painlessly.</h1>
+</div>
+<div id="podcasts" class="cf">
+	<div class="wrapper">
+		<ul>
+			<% @podcasts.each do |podcast| %>
+				<%= link_to podcast do %>
+					<li>
+						<img src="images/bike_portland.jpg" alt="Bike Portland"/>
+						<div class="podcast_overview">
+							<h2><%= podcast.title %></h2>
+							<p class="episode_count">1 Episode</p>
+						</div>
+					</li>
+				<% end %>
+			<% end %>
+		</ul>
+	</div>
+</div>

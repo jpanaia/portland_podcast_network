@@ -1,0 +1,73 @@
+	<div id="podcast_show">
+		<div id="show_banner">
+			<div class="wrapper_skinny">
+				<h1><%= @podcast.title %></h1>
+				<p><%= @podcast.description %></p>
+				<% unless @podcast.itunes.blank? %>
+					<a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
+				<% end %>
+				<% unless @podcast.stitcher.blank? %>
+					<a href="<%= @podcast.stitcher %>" class="subscribe_link">Stitcher</a>
+				<% end %>
+				<% unless @podcast.podbay.blank? %>
+					<a href="<%= @podcast.podbay %>" class="subscribe_link">Podbay</a>
+				<% end %>
+			</div>
+		</div>
+		<div id="breadcrumb"> 
+			<%= link_to "All Podcasts", podcasts_path %>
+			<span>/</span>
+			<% @podcasts.each do |podcast| %>
+				<% if podcast.id == @podcast.id %>
+					<%= link_to podcast.title, podcast %>
+					<%#= podcast.title %>
+				<% end %>
+			<% end %>
+				<!-- Bike Portland-->
+		</div>
+		<div id="episodes">
+			<div class="wrapper_skinny">
+				<ul class="cf">
+					<li class="cf">
+						<div class="episode_thumbnail">
+							<a href="episode.html">
+								<img src="images/bike_portland.jpg" alt="">
+							</a>
+						</div>
+						<div class="episode_overview">
+							<h2><a href="">Pedaling the urban/rural divide</a></h2>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptate veritatis omnis...</p>
+						</div>
+					</li>
+					<li class="cf">
+						<div class="episode_thumbnail">
+							<a href="episode.html">
+								<img src="images/bike_portland.jpg" alt="">
+							</a>
+						</div>
+						<div class="episode_overview">
+							<h2><a href="">Pedaling the urban/rural divide</a></h2>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptate veritatis omnis...</p>
+						</div>
+					</li>
+					<li class="cf">
+						<div class="episode_thumbnail">
+							<a href="episode.html">
+								<img src="images/bike_portland.jpg" alt="">
+							</a>
+						</div>
+						<div class="episode_overview">
+							<h2><a href="">Pedaling the urban/rural divide</a></h2>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptate veritatis omnis...</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="pagination">
+			<span class="previous_page disabled">Previous</span>
+			<em class="current">1</em>
+			<a href="#">2</a>
+			<a class="next_page" href="#">Next</a>
+		</div>
+	</div>
